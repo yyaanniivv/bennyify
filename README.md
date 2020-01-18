@@ -1,8 +1,12 @@
-# chrisify
+# bennyify
+
+Forked from: [github.com/zikes/chrisify](github.com/zikes/chrisify)
 
 ## Linux Install
 
-1. Install the OpenCV Developer package. On Ubuntu systems that's `sudo apt install libopencv-dev`
+1. Install the OpenCV Developer package.
+    1. In MacOs - https://gocv.io/getting-started/macos/
+    1. On Ubuntu systems that's `sudo apt install libopencv-dev`
 
 2. `go get github.com/zikes/chrisify`
 

@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/zikes/chrisify/facefinder"
+	"github.com/yyaanniivv/bennyify/facefinder"
 
 	"github.com/disintegration/imaging"
 )
@@ -20,7 +20,7 @@ var facesDir = flag.String("faces", "faces", "The directory to search for faces.
 func main() {
 	flag.Parse()
 
-	var chrisFaces FaceList
+	var bennyFaces FaceList
 
 	var facesPath string
 	var err error
@@ -32,11 +32,11 @@ func main() {
 		}
 	}
 
-	err = chrisFaces.Load(facesPath)
+	err = bennyFaces.Load(facesPath)
 	if err != nil {
 		panic(err)
 	}
-	if len(chrisFaces) == 0 {
+	if len(bennyFaces) == 0 {
 		panic("no faces found")
 	}
 
@@ -55,7 +55,7 @@ func main() {
 	for _, face := range faces {
 		rect := rectMargin(30.0, face)
 
-		newFace := chrisFaces.Random()
+		newFace := bennyFaces.Random()
 		if newFace == nil {
 			panic("nil face")
 		}
@@ -72,7 +72,7 @@ func main() {
 
 	if len(faces) == 0 {
 		face := imaging.Resize(
-			chrisFaces[0],
+			bennyFaces[0],
 			bounds.Dx()/3,
 			0,
 			imaging.Lanczos,
